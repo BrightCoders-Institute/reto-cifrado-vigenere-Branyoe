@@ -1,9 +1,9 @@
-require_relative './vigenere_cipher'
+require_relative './vigenere_encrypter'
 require_relative './utils'
 
 class App
   def initialize
-    @encrypter = VigenereCipher.new
+    @encrypter = VigenereEncrypter.new
   end
 
   
