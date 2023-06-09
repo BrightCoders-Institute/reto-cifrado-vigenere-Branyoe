@@ -54,24 +54,25 @@ Esta actividad tiene como objetivos:
 # ✅ Indicadores de cumplimiento
 
 1. Sintaxis y semántica de Ruby:
+
    - El código debe estar escrito utilizando la sintaxis correcta de Ruby.
    - Se deben utilizar las convenciones de nomenclatura adecuadas de Ruby.
-
 2. Uso de RuboCop:
-   - Se debe utilizar RuboCop como herramienta de análisis estático para mejorar la calidad del código Ruby.
 
+   - Se debe utilizar RuboCop como herramienta de análisis estático para mejorar la calidad del código Ruby.
 3. Programación orientada a objetos:
+
    - Deben aplicarse los conceptos fundamentales de la programación orientada a objetos, como encapsulación, herencia, polimorfismo y abstracción.
    - El código debe ser modular, reutilizable y fácil de mantener.
-
 4. Uso de polimorfismo en lugar de banderas booleanas:
-   - Deben identificarse situaciones en las que se utilizan banderas booleanas y reemplazarlas por polimorfismo.
 
+   - Deben identificarse situaciones en las que se utilizan banderas booleanas y reemplazarlas por polimorfismo.
 5. Desarrollo basado en pruebas:
+
    - Se deben desarrollar pruebas unitarias y funcionales utilizando RSpec y/o MiniTest.
    - Las pruebas deben garantizar la calidad y robustez del código.
-
 6. Aplicación de los principios SOLID:
+
    - Deben aplicarse los principios SOLID (Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, Dependency Inversion) en el diseño y desarrollo del software.
    - El código debe ser modular, flexible y fácil de mantener.
 
@@ -114,21 +115,17 @@ El cifrado de Vigenère es un tipo de cifrado polialfabético, lo que significa 
 Aquí está el paso a paso del algoritmo:
 
 1. Primero, necesitas tener la clave de cifrado. La clave es una palabra o una frase que se utilizará para cifrar el mensaje. Por ejemplo, la clave podría ser "SECRETO".
-
 2. Luego, convierte el mensaje original y la clave a valores numéricos según la posición de las letras en el alfabeto. Por ejemplo, A=0, B=1, C=2, y así sucesivamente. Si el mensaje original es "HOLA" y la clave es "SECRETO", se convierten a números de la siguiente manera:
+
    - Mensaje original: H=7, O=14, L=11, A=0
    - Clave: S=18, E=4, C=2, R=17, E=4, T=19, O=14
-
 3. Ahora, se debe repetir la clave para que tenga la misma longitud que el mensaje original. En este caso, la clave "SECRETO" se repetirá hasta que tenga la longitud del mensaje original. Por lo tanto, la clave repetida sería: "SECRETOSE".
-
 4. A continuación, sumamos el valor numérico de cada letra del mensaje original con el valor numérico correspondiente de la clave repetida, utilizando aritmética modular. Para esto, utilizamos la tabla de Vigenère.
 
    - Para cifrar el primer carácter del mensaje original "H" (valor numérico 7) con el primer carácter de la clave "S" (valor numérico 18), encontramos la intersección en la tabla de Vigenère. El valor cifrado sería "Z" (valor numérico 25). Así sucesivamente, se aplica este proceso para cada letra del mensaje original.
-
 5. Finalmente, convertimos los valores numéricos cifrados en letras nuevamente, utilizando la tabla de Vigenère inversa.
 
    - Por ejemplo, el valor numérico cifrado "Z" (valor numérico 25) se convierte en "A". Así, convertimos todos los valores numéricos cifrados nuevamente a letras.
-
 6. El resultado final es el mensaje cifrado, que se obtiene al combinar las letras obtenidas en el paso anterior. En este caso, si ciframos el mensaje original "HOLA" con la clave "SECRETO", el mensaje cifrado resultante sería "ZURW".
 
 Este es el proceso básico del algoritmo de cifrado de Vigenère. Para implementarlo en un programa, necesitarías funciones para convertir letras en valores numéricos y viceversa, así como la tabla de Vigenère para encontrar las coincidencias. Puedes utilizar ciclos y operaciones matemáticas para realizar las sumas y cálculos necesarios.
@@ -142,13 +139,14 @@ Tabla de Vigenère
 # 🚨 Requerimientos no funcionales
 
 - Calidad:
+
   - Aplicar el estilo de código definido por la comunidad, utilizando RuboCop como herramienta de apoyo.
   - Incluir pruebas unitarias para garantizar la calidad del código.
-
 - Desempeño y escalabilidad:
-  - Permitir la ejecución desde la línea de comandos y mostrar la salida en la consola de manera eficiente y rápida.
 
+  - Permitir la ejecución desde la línea de comandos y mostrar la salida en la consola de manera eficiente y rápida.
 - Código fuente:
+
   - Desarrollar una solución orientada a objetos, siguiendo los principios de la programación orientada a objetos (POO).
   - Escribir métodos pequeños y con un solo propósito para mejorar la legibilidad y el mantenimiento del código.
   - Aplicar los principios SOLID para lograr un diseño modular, flexible y de fácil extensibilidad.
@@ -158,4 +156,4 @@ Tabla de Vigenère
 - [Desarrollo Basado en Pruebas](https://brightcoders-2.gitbook.io/brightcoders-handbook/recursos/ruby-on-rails/desarrollo-basado-en-pruebas)
 - [RuboCop](https://brightcoders-2.gitbook.io/brightcoders-handbook/recursos/ruby-on-rails/rubocop)
 - [Principios SOLID y Polimorfismo](https://brightcoders-2.gitbook.io/brightcoders-handbook/recursos/ruby-on-rails/solid-and-polimorfismo)
-- [Git & Github](https://brightcoders-2.gitbook.io/brightcoders-handbook/recursos/git-and-github/git-and-github)
+- [Git &amp; Github](https://brightcoders-2.gitbook.io/brightcoders-handbook/recursos/git-and-github/git-and-github)

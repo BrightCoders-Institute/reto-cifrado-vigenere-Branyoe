@@ -2,9 +2,6 @@
 
 require_relative 'models/vigenere_cipher'
 
-my_encrypter = VigenereCipher.new('secreto')
-
-# my_encrypter.encrypt('hola')
-
-# puts my_encrypter.adapted_secret_key
-my_encrypter.print_table
+my_encrypter = VigenereCipher.new('CODEC')
+puts my_encrypter.encrypt("RUBY")
+puts my_encrypter.decrypt(my_encrypter.encrypt("RUBY"))
