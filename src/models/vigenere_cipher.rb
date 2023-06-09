@@ -1,8 +1,7 @@
 
 
 class VigenereCipher
-  def initialize(secret_key)
-    @secret_key = secret_key
+  def initialize
     @alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     @table = generate_table
     @char_numbers = {
@@ -45,8 +44,8 @@ class VigenereCipher
     end
   end
 
-  def encrypt(message)
-    adapted_secret_key = adapt_secret_key(message, @secret_key)
+  def encrypt(message, key)
+    adapted_secret_key = adapt_secret_key(message, key)
     str = ""
     for i in 0...message.length do
       str = "#{str}#{@table[@char_numbers[message[i]]][@char_numbers[adapted_secret_key[i]]]}"
@@ -54,14 +53,12 @@ class VigenereCipher
     return str
   end
 
-  def decrypt(code)
-    adapted_secret_key = adapt_secret_key = adapt_secret_key(code, @secret_key)
+  def decrypt(code, key)
+    adapted_secret_key = adapt_secret_key = adapt_secret_key(code, key)
     str = ""
     for axisY in 0...code.length do
-      for axisX in 0...@alphabet.length do
-        char = @table[@char_numbers[adapt_secret_key[axisY]]][axisX]
-        if char == code[axisY] then str = "#{str}#{@table[0][axisX]}" end
-      end 
+      char = @table[0][@char_numbers[code[axisY]]-@char_numbers[adapt_secret_key[axisY]]]
+      str = "#{str}#{char}"
     end
     return str
   end
